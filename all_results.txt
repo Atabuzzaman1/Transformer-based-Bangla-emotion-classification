@@ -1,0 +1,236 @@
+Total: The data collectors collected 12635 comments from Facebook, Youtube and Newsportal. 
+label no.text
+0    3076
+1    2546
+3    2267
+4    2183
+2    1299
+5    1264
+Total: 12635
+maximum no. of words: 522
+minimum no. of words: 1
+total words: 246598
+average no. of words/texts: 19.517055797388206
+
+Experts removied  sentences: 
+
+247 joy (neutral emotion annotated as joy by the annotators), 
+23 disgust (confusing disgust or anger), 
+and 37 anger (confusing disgust or anger) texts.
+The dataset contains 12328 texts.
+
+After removing sentence with less than 4 words and greater than 300 words:
+0    2654
+1    2477
+3    2229
+4    2047
+2    1266
+5    1254
+Total: 11927
+maximum no. of words: 300
+minimum no. of words: 4
+total words: 245028
+average no. of words/texts: 20.543975853106396
+
+no of words in class 0:  50035
+average words in class 0:  18.852675207234363
+no of words in class 1:  56130
+average words in class 1:  22.660476382721033
+no of words in class 2:  27218
+average words in class 2:  21.499210110584517
+no of words in class 3:  48109
+average words in class 3:  21.583221175414984
+no of words in class 4:  37321
+average words in class 4:  18.232046897899366
+no of words in class 5:  26215
+average words in class 5:  20.905103668261564
+
+No. of Unique Words:
+class	no. unique of words
+joy	12691
+sadness	13718
+surprise 9045
+disgust	10548
+anger	10957
+fear	8092
+Total: 65091.
+
+Final ML models:
+
+Precision	Recall	F1 Score	Accuracy
+Logistic Regression	54.15	54.23	54.15	54.23
+
+Random Forest	51.51	50.13	49.14	50.13
+
+Naive Bayes	58.72	50.44	47.44	50.44
+
+SVM	56.88	53.66	53.57	53.66
+
+Ensemble:
+
+[[515  89   8  36  30   4]
+ [ 94 371  20  65  44  12]
+ [ 86  92  82  45  24  15]
+ [ 51 105  15 287  63   6]
+ [ 55 120  15  92 216   5]
+ [ 37  78  14  17  22 152]]
+              precision    recall  f1-score   support
+
+           0       0.61      0.76      0.68       682
+           1       0.43      0.61      0.51       606
+           2       0.53      0.24      0.33       344
+           3       0.53      0.54      0.54       527
+           4       0.54      0.43      0.48       503
+           5       0.78      0.47      0.59       320
+
+    accuracy                           0.54      2982
+   macro avg       0.57      0.51      0.52      2982
+weighted avg       0.56      0.54      0.54      2982
+
+
+Precison :  55.910000000000004
+
+Recall :  54.43
+
+F1 :  53.53
+
+Accuracy :  54.43
+
+
+LSTM:
+
+precision    recall  f1-score   support
+
+           0       0.57      0.62      0.59       682
+           1       0.40      0.45      0.42       630
+           2       0.38      0.28      0.33       299
+           3       0.55      0.50      0.52       542
+           4       0.51      0.38      0.43       511
+           5       0.40      0.56      0.47       318
+
+    accuracy                           0.48      2982
+   macro avg       0.47      0.46      0.46      2982
+weighted avg       0.48      0.48      0.48      2982
+
+
+BiLSTM:
+
+precision    recall  f1-score   support
+
+           0       0.62      0.58      0.60       682
+           1       0.45      0.40      0.42       630
+           2       0.28      0.39      0.33       299
+           3       0.49      0.52      0.51       542
+           4       0.48      0.43      0.45       511
+           5       0.50      0.52      0.51       318
+
+    accuracy                           0.48      2982
+   macro avg       0.47      0.47      0.47      2982
+weighted avg       0.49      0.48      0.48      2982
+
+
+CNN-BiLSTM:
+ precision    recall  f1-score   support
+
+           0       0.71      0.48      0.57       682
+           1       0.39      0.42      0.40       630
+           2       0.33      0.30      0.32       299
+           3       0.58      0.43      0.49       542
+           4       0.34      0.59      0.43       511
+           5       0.53      0.47      0.49       318
+
+    accuracy                           0.46      2982
+   macro avg       0.48      0.45      0.45      2982
+weighted avg       0.50      0.46      0.46      2982
+
+
+Bangla BERT:
+
+ 		precision    recall  f1-score   support
+
+           0       0.69      0.73      0.71       664
+           1       0.45      0.49      0.47       619
+           2       0.48      0.35      0.40       317
+           3       0.49      0.53      0.51       557
+           4       0.48      0.49      0.49       512
+           5       0.67      0.52      0.59       313
+
+    accuracy                           0.54      2982
+   macro avg       0.54      0.52      0.53      2982
+weighted avg       0.54      0.54      0.54      2982
+
+[[483  77  18  38  38  10]
+ [ 88 305  34  87  82  23]
+ [ 46  52 110  45  33  31]
+ [ 41  91  22 296  96  11]
+ [ 29  95  20 110 251   7]
+ [ 16  64  25  24  20 164]]
+
+
+csebuetnlp/BERT (ELECTRA):
+
+precision    recall  f1-score   support
+
+           0       0.57      0.64      0.60       664
+           1       0.27      0.42      0.33       619
+           2       0.00      0.00      0.00       317
+           3       0.31      0.45      0.37       557
+           4       0.34      0.18      0.24       512
+           5       0.61      0.32      0.42       313
+
+    accuracy                           0.38      2982
+   macro avg       0.35      0.34      0.32      2982
+weighted avg       0.36      0.38      0.35      2982
+
+[[426 156   0  44  35   3]
+ [120 260   0 160  64  15]
+ [ 45 113   0 112  34  13]
+ [ 57 189   0 251  34  26]
+ [ 79 187   0 147  94   5]
+ [ 23  74   0 102  15  99]]
+
+
+mBERT:
+		precision    recall  f1-score   support
+
+           0       0.66      0.73      0.70       531
+           1       0.38      0.56      0.45       496
+           2       0.43      0.09      0.15       253
+           3       0.44      0.42      0.43       446
+           4       0.52      0.49      0.51       409
+           5       0.66      0.51      0.57       251
+
+    accuracy                           0.51      2386
+   macro avg       0.51      0.47      0.47      2386
+weighted avg       0.51      0.51      0.49      2386
+
+
+[[472  83  21  38  35  15]
+ [ 94 306  27 107  58  27]
+ [ 45  53 111  50  30  28]
+ [ 42 105  19 303  77  11]
+ [ 31  90  15 139 226  11]
+ [ 16  70  22  18  24 163]]
+
+
+XLM-R:
+  precision    recall  f1-score   support
+
+           0       0.65      0.60      0.62       664
+           1       0.32      0.42      0.37       619
+           2       0.33      0.21      0.25       317
+           3       0.35      0.43      0.39       557
+           4       0.44      0.44      0.44       512
+           5       0.72      0.38      0.49       313
+
+    accuracy                           0.44      2982
+   macro avg       0.47      0.41      0.43      2982
+weighted avg       0.46      0.44      0.44      2982
+
+[[397 147  18  52  44   6]
+ [ 90 262  36 139  81  11]
+ [ 39  97  65  72  27  17]
+ [ 37 140  25 242 107   6]
+ [ 41 110  14 117 223   7]
+ [ 11  58  40  62  24 118]]
+
